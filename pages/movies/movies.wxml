@@ -1,0 +1,15 @@
+<import src="movie-list-template/movie-list-template.wxml" />
+<import src="movie-grid/movie-grid-template.wxml" />
+<view class="search">
+  <icon type="search" size="23"/>
+  <input type="text" placeholder="盗梦空间、幕后玩家..." bindfocus="onFocus" bindconfirm="onConfirm"/>
+  <icon bindtap="iconHideSearch" wx:if="{{showSearch}}" type="clear" size="23"/>
+</view>
+<view wx:if="{{!showSearch}}">
+  <template is="movie-list-template" data="{{...hotMoviesData}}"></template>
+  <template is="movie-list-template" data="{{...topMoviesData}}"></template>
+  <template is="movie-list-template" data="{{...willMoviesData}}"></template>
+</view>
+<view class="search-page" wx:if="{{showSearch}}">
+  <template is="movie-grid-template" data="{{...searchData}}"></template>
+</view>

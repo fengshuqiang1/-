@@ -1,0 +1,21 @@
+<!--pages/post/post-detail/post-detail.wxml-->
+<view class="detail">
+  <image class="detail-img" src="{{isPlaying?postData.music.coverImg:postData.headImgSrc}}"></image>
+  <image catchtap="onMusicTap" class="detail-music" src="{{isPlaying?'/images/music/music-stop.png':'/images/music/music-start.png'}}"></image>
+  <view class="detail-author-info">
+    <image class="detail-avatar" src="{{postData.avatar}}"></image>
+    <text class="detail-authorName">{{postData.author}}</text>
+    <text class="detail-text">发表于</text>
+    <text class="detail-date">{{postData.dateTime}}</text>
+  </view>
+  <text class="detail-title">{{postData.title}}</text>
+  <view class="detail-collect-share">
+    <view class="detail-circle-img">
+      <image bindtap="onCollectionTap" wx:if="{{collected}}" class="detail-collect" src="/images/icon/collection.png"></image>
+      <image bindtap="onCollectionTap" wx:else class="detail-collect" src="/images/icon/collection-anti.png"></image>
+      <image catchtap="onShareTap" class="detail-share" src="/images/icon/share.png"></image>
+    </view>
+    <view class="detail-horizontal"></view>
+  </view>
+  <view class="detail-content"><text>{{postData.detail}}</text></view>
+</view>

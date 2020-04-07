@@ -1,0 +1,36 @@
+<import src="../stars/stars-template.wxml"/>
+<view class="movie-detail">
+  <image class="movie-detail-headerImg" src="{{movieData.image}}" mode="aspectFill"></image>
+  <view class="movie-detail-header">
+    <text class="movie-detail-headerTitle">{{movieData.title}}</text>
+    <text class="movie-detail-countryYear">{{movieData.country}} · {{movieData.year}}</text>
+    <view class="movie-detail-linkComment">
+      <text class="movie-detail-like">{{movieData.like}}</text><text class="movie-detail-text">人喜欢</text>
+      <text class="movie-detail-comment">{{movieData.commentCount}}</text><text class="movie-detail-text">条评论</text>
+    </view>
+  </view>
+  <image class="movie-detail-postImg" src="{{movieData.image}}"></image>
+  <view class="movie-detail-movie">
+    <text class="movie-detail-movieTitle">{{movieData.title}}</text>
+    <view class="movie-detail-average"><text class="movie-detail-title">评分</text><template is="stars-template" data="{{ ...movieData }}"></template></view>
+    <view class="movie-detail-director"><text class="movie-detail-title">导演</text><text>{{movieData.director.name}}</text></view>
+    <view class="movie-detail-casts"><text class="movie-detail-title">演员</text><text>{{movieData.castsName}}</text></view>
+    <view class="movie-detail-movieType"><text class="movie-detail-title">类型</text><text>{{movieData.genres}}</text></view>
+  </view>
+  <view class="movie-detail-summary">
+    <text class="movie-detail-summaryTitle">剧情简介</text>
+    <text class="movie-detail-summaryDetail">{{movieData.summary}}</text>
+  </view>
+  <view class="movie-detail-castsInfo">
+    <text class="movie-detail-castsTitle">演员</text>
+    <scroll-view class="movie-detail-castItems" scroll-x="true" scroll-y="false">
+      <block wx:for="{{movieData.castsInfo}}" wx:for-item="cast" wx:for-index="index" wx:key="index">
+        <view class="movie-detail-castItem">
+          <image class="movie-detail-castImg" src="{{cast.avatars.large}}"></image>
+          <text class="movie-detail-castName">{{cast.name}}</text>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+</view>
+

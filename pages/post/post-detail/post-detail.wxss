@@ -1,0 +1,74 @@
+/* pages/post/post-detail/post-detail.wxss */
+.detail {
+  padding-bottom: 60rpx;
+}
+.detail-img{
+  width: 100%;
+}
+.detail-music{
+  height: 100rpx;
+  width: 100rpx;
+  position: absolute;
+  top: 190rpx;
+  left: 50%;
+  transform: translate3d(-50%,0,0);
+  opacity: 0.6;
+}
+.detail-author-info{
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+}
+.detail-avatar{
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 16rpx;
+}
+.detail-authorName{
+  margin-right: 16rpx;
+}
+.detail-text{
+  font-size: 24rpx;
+  color: #666;
+}
+.detail-date{
+  margin-left: 16rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+.detail-title{
+  padding-left: 20rpx;
+  font-weight: bold;
+  font-size: 36rpx;
+}
+.detail-collect-share{
+  height: 80rpx;
+  margin: 40rpx 0;
+}
+.detail-circle-img{
+  float: right;
+  margin-right: 40rpx;
+}
+.detail-horizontal{
+  width: 660rpx;
+  height: 2rpx;
+  background-color: #e5e5e5;
+  position: relative;
+  top: 39rpx;
+  margin: 0 auto;
+  z-index: -1;
+}
+.detail-collect,.detail-share{
+  width: 80rpx;
+  height: 80rpx;
+}
+.detail-collect{
+  margin-right: 30rpx;
+}
+.detail-content {
+  font-size: 24rpx;
+  color: #666;
+  line-height: 44rpx;
+  letter-spacing: 2px;
+  padding: 0 20rpx;
+}

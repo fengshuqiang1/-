@@ -1,0 +1,18 @@
+/* pages/movies/stars/stars.wxss */
+.stars-container{
+  display: flex;
+  align-items: center;
+}
+.star-img{
+  display: flex;
+  align-items: center;
+  margin-right: 20rpx;
+}
+.star-img image{
+  height: 20rpx;
+  width: 20rpx;
+  margin-right: 6rpx;
+}
+.star-score{
+  font-size: 28rpx;
+}

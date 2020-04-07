@@ -1,0 +1,6 @@
+<!--pages/welcome/welcome.wxml-->
+<view class="welcome">
+  <image class="welcome-avatar" src="/images/avatar/1.png"></image>
+  <text class="welcome-text">hello，FSQ</text>
+  <button class="welcome-button" bind:tap="onTap">开启小程序之旅</button>
+</view>
